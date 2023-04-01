@@ -1,0 +1,15 @@
+.page-search {
+  padding-top: 32px;
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.table-forks-wrapper {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 120px;
+}
