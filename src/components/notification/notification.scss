@@ -1,0 +1,52 @@
+.notification-container {
+  display: block;
+  pointer-events: none;
+  position: fixed;
+  z-index: 2;
+  right: 20px;
+  top: 20px;
+  min-width: 320px;
+  max-width: 450px;
+  overflow: auto;
+  opacity: 0;
+  transition: ease all 0.3s;
+
+  &.opened {
+    pointer-events: all;
+    display: block;
+    opacity: 1;
+  }
+
+  .notification-content {
+    background-color: #aa1803;
+    color: white;
+    padding: 20px;
+    width: 80%;
+    border-radius: 3px;
+    position: relative;
+    text-align: left;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .close {
+    font-size: 32px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+
+  .close:hover,
+  .close:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
