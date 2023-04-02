@@ -31,8 +31,6 @@ function Search() {
   const error = useAppSelector(selectSearchError);
   const pageCount = useAppSelector(selectSearchPageCount(perPage));
 
-  console.log({ gists, loading, total, pageCount, page, perPage });
-
   useEffect(() => {
     dispatch(searchAsync({ query, page, perPage }));
   }, [dispatch, query, page, perPage]);
@@ -53,7 +51,6 @@ function Search() {
       page: page.toString(),
     });
   };
-  console.log(gists);
   return (
     <section className="container page-container page-search">
       <Spinner visible={loading} />
